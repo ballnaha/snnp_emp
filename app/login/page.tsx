@@ -18,7 +18,9 @@ import { signIn } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 
-export default function LoginPage() {
+import { Suspense } from 'react';
+
+function LoginContent() {
     const searchParams = useSearchParams();
     const callbackUrl = searchParams.get("callbackUrl") || "/admin";
 
@@ -163,5 +165,17 @@ export default function LoginPage() {
                 </Box>
             </Container>
         </Box>
+    );
+}
+
+export default function LoginPage() {
+    return (
+        <Suspense fallback={
+            <Box sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff' }}>
+                <CircularProgress />
+            </Box>
+        }>
+            <LoginContent />
+        </Suspense>
     );
 }

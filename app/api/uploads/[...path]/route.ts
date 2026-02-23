@@ -4,10 +4,10 @@ import path from "path";
 
 export async function GET(
     req: NextRequest,
-    { params }: { params: { path: string[] } }
+    { params }: { params: Promise<{ path: string[] }> }
 ) {
     try {
-        const resolvedParams = await (params as any);
+        const resolvedParams = await params;
         const pathSegments = resolvedParams.path;
 
         // Join segments to create the full relative path

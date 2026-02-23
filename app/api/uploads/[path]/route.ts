@@ -4,10 +4,10 @@ import path from "path";
 
 export async function GET(
     req: NextRequest,
-    { params }: { params: { path: string | string[] } }
+    { params }: { params: Promise<{ path: string }> }
 ) {
     try {
-        const resolvedParams = await (params as any);
+        const resolvedParams = await params;
         // If the route is [path], it might only capture one segment.
         // For nested paths, we usually need [...path].
         // But let's see if we can decode it if it's passed as card/file.png
