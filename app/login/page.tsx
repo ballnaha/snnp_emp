@@ -51,19 +51,20 @@ function LoginContent() {
         setError('');
 
         try {
-            // ใช้ความสามารถในการ Redirect ของ NextAuth โดยตรง (ลบ redirect: false ออก)
-            await signIn('credentials', {
+            const res = await signIn('credentials', {
                 username,
                 password,
-                redirectTo: callbackUrl,
+                redirect: false,
             });
-        } catch (err: any) {
-            // ถ้าเป็น error จากการยกเลิกโดยระบบ Next.js (เป็นปกติ) ให้ข้ามไป
-            if (err?.type === 'CredentialsSignin') {
+
+            if (res?.error) {
                 setError('ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง');
-            } else {
+            } else if (res?.ok || res?.url) {
                 setError('เข้าสู่ระบบสำเร็จ กำลังพาคุณไป...');
+                window.location.href = callbackUrl;
             }
+        } catch (err: any) {
+            setError('เกิดข้อผิดพลาดในการเชื่อมต่อระบบ');
         } finally {
             setLoading(false);
         }
