@@ -163,10 +163,10 @@ export default function StaffManagementPage() {
             {/* Page Title and Action */}
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' }, mb: 4, gap: 2 }}>
                 <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 600, fontFamily: 'var(--font-prompt)', color: '#1E293B' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 600, fontFamily: 'var(--font-sarabun)', color: '#1E293B' }}>
                         จัดการข้อมูลพนักงาน
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', mt: 0.5 }}>
+                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', mt: 0.5 }}>
                         บันทึกและแก้ไขข้อมูลประวัติพนักงานสำหรับออกบัตร
                     </Typography>
                 </Box>
@@ -176,7 +176,7 @@ export default function StaffManagementPage() {
                     onClick={() => router.push('/admin/staff/new')}
                     sx={{
                         borderRadius: '12px', bgcolor: '#1E293B', textTransform: 'none', px: 2.5, py: 1,
-                        fontFamily: 'var(--font-prompt)', fontWeight: 600, fontSize: '0.85rem',
+                        fontFamily: 'var(--font-sarabun)', fontWeight: 600, fontSize: '0.85rem',
                         boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)',
                         '&:hover': { bgcolor: '#000', transform: 'translateY(-2px)' },
                         transition: 'all 0.2s'
@@ -206,7 +206,7 @@ export default function StaffManagementPage() {
                             ),
                             sx: { borderRadius: '14px', bgcolor: '#F8FAFC', border: 'none', '& fieldset': { border: 'none' } }
                         }}
-                        sx={{ maxWidth: 450, '& .MuiInputBase-input': { fontFamily: 'var(--font-prompt)', py: 1.5, fontSize: '0.95rem' } }}
+                        sx={{ maxWidth: 450, '& .MuiInputBase-input': { fontFamily: 'var(--font-sarabun)', py: 1.5, fontSize: '0.95rem' } }}
                     />
                 </Box>
 
@@ -214,11 +214,11 @@ export default function StaffManagementPage() {
                     <Table>
                         <TableHead sx={{ bgcolor: '#F8FAFC' }}>
                             <TableRow>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', py: 2.5 }}>พนักงาน</TableCell>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569' }}>รหัส / บัตร ปชช.</TableCell>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569' }}>ฝ่าย / แผนก</TableCell>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569' }}>วันที่เริ่มงาน</TableCell>
-                                <TableCell align="right" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', pr: 4 }}>จัดการ</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', py: 2.5 }}>พนักงาน</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569' }}>รหัส / บัตร ปชช.</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569' }}>ฝ่าย / แผนก</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569' }}>วันที่เริ่มงาน</TableCell>
+                                <TableCell align="right" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', pr: 4 }}>จัดการ</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -232,7 +232,7 @@ export default function StaffManagementPage() {
                                 <TableRow>
                                     <TableCell colSpan={5} align="center" sx={{ py: 8 }}>
                                         <DirectboxNotif size={64} color="#CBD5E1" variant="Bulk" />
-                                        <Typography sx={{ mt: 2, fontFamily: 'var(--font-prompt)', color: '#94A3B8', fontWeight: 500 }}>
+                                        <Typography sx={{ mt: 2, fontFamily: 'var(--font-sarabun)', color: '#94A3B8', fontWeight: 500 }}>
                                             ไม่พบข้อมูลพนักงานที่ค้นหา
                                         </Typography>
                                     </TableCell>
@@ -255,10 +255,10 @@ export default function StaffManagementPage() {
                                                 {item.th_firstname?.charAt(0) || 'E'}
                                             </Avatar>
                                             <Box>
-                                                <Typography sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#1E293B', lineHeight: 1.2, fontSize: '1.1rem' }}>
+                                                <Typography sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#1E293B', lineHeight: 1.2, fontSize: '1.1rem' }}>
                                                     {item.th_firstname} {item.th_lastname}
                                                 </Typography>
-                                                <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', mt: 0.5 }}>
+                                                <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', mt: 0.5 }}>
                                                     {item.en_firstname} {item.en_lastname}
                                                 </Typography>
                                             </Box>
@@ -266,26 +266,26 @@ export default function StaffManagementPage() {
                                     </TableCell>
                                     <TableCell>
                                         <Stack spacing={0.5}>
-                                            <Typography sx={{ fontFamily: 'var(--font-prompt)', color: '#6366F1', fontWeight: 700, fontSize: '0.95rem', bgcolor: '#EEF2FF', px: 1, py: 0.5, borderRadius: '6px', display: 'inline-block', width: 'fit-content' }}>
+                                            <Typography sx={{ fontFamily: 'var(--font-sarabun)', color: '#6366F1', fontWeight: 700, fontSize: '0.95rem', bgcolor: '#EEF2FF', px: 1, py: 0.5, borderRadius: '6px', display: 'inline-block', width: 'fit-content' }}>
                                                 ID: {item.emp_id}
                                             </Typography>
-                                            <Typography variant="caption" sx={{ color: '#94A3B8', fontFamily: 'var(--font-prompt)', display: 'flex', alignItems: 'center', gap: 0.5, fontSize: '0.8rem' }}>
+                                            <Typography variant="caption" sx={{ color: '#94A3B8', fontFamily: 'var(--font-sarabun)', display: 'flex', alignItems: 'center', gap: 0.5, fontSize: '0.8rem' }}>
                                                 <Personalcard size={14} /> {item.emp_card_id || '-'}
                                             </Typography>
                                         </Stack>
                                     </TableCell>
                                     <TableCell>
                                         <Stack spacing={0.5}>
-                                            <Typography sx={{ fontFamily: 'var(--font-prompt)', fontSize: '0.95rem', color: '#1E293B', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                                            <Typography sx={{ fontFamily: 'var(--font-sarabun)', fontSize: '0.95rem', color: '#1E293B', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.5 }}>
                                                 <Hierarchy size={16} color="#3B82F6" /> {item.department || '-'}
                                             </Typography>
-                                            <Typography sx={{ fontFamily: 'var(--font-prompt)', fontSize: '0.85rem', color: '#64748B' }}>
+                                            <Typography sx={{ fontFamily: 'var(--font-sarabun)', fontSize: '0.85rem', color: '#64748B' }}>
                                                 {item.section || '-'}
                                             </Typography>
                                         </Stack>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography sx={{ fontFamily: 'var(--font-prompt)', fontSize: '0.95rem', color: '#1E293B', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 1 }}>
+                                        <Typography sx={{ fontFamily: 'var(--font-sarabun)', fontSize: '0.95rem', color: '#1E293B', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 1 }}>
                                             <CalendarTick size={18} color="#F59E0B" /> {formatDate(item.start_date)}
                                         </Typography>
                                     </TableCell>
@@ -325,8 +325,8 @@ export default function StaffManagementPage() {
                     onRowsPerPageChange={handleChangeRowsPerPage}
                     sx={{
                         borderTop: '1px solid #F1F5F9',
-                        '& .MuiTablePagination-toolbar': { fontFamily: 'var(--font-prompt)' },
-                        '& .MuiTablePagination-selectLabel, & .MuiTablePagination-displayedRows': { fontFamily: 'var(--font-prompt)', color: '#64748B' }
+                        '& .MuiTablePagination-toolbar': { fontFamily: 'var(--font-sarabun)' },
+                        '& .MuiTablePagination-selectLabel, & .MuiTablePagination-displayedRows': { fontFamily: 'var(--font-sarabun)', color: '#64748B' }
                     }}
                 />
             </Paper>
@@ -341,7 +341,7 @@ export default function StaffManagementPage() {
                     onClose={handleSnackbarClose}
                     severity={snackbar.severity}
                     variant="filled"
-                    sx={{ borderRadius: '12px', fontFamily: 'var(--font-prompt)', fontWeight: 600 }}
+                    sx={{ borderRadius: '12px', fontFamily: 'var(--font-sarabun)', fontWeight: 600 }}
                 >
                     {snackbar.message}
                 </Alert>
@@ -362,10 +362,10 @@ export default function StaffManagementPage() {
                     }}>
                         <Danger size={48} variant="Bold" color="#EF4444" />
                     </Box>
-                    <Typography variant="h6" sx={{ fontWeight: 800, fontFamily: 'var(--font-prompt)', mb: 1 }}>
+                    <Typography variant="h6" sx={{ fontWeight: 800, fontFamily: 'var(--font-sarabun)', mb: 1 }}>
                         ยืนยันการลบข้อมูลพนักงาน?
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', mb: 3 }}>
+                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', mb: 3 }}>
                         คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลของ <strong>{staffToDelete?.th_firstname} {staffToDelete?.th_lastname}</strong>? การดำเนินการนี้ไม่สามารถย้อนกลับได้
                     </Typography>
                 </DialogContent>
@@ -373,7 +373,7 @@ export default function StaffManagementPage() {
                     <Button
                         disabled={deleteLoading}
                         onClick={() => setDeleteConfirmOpen(false)}
-                        sx={{ fontFamily: 'var(--font-prompt)', color: '#64748B', fontWeight: 600, flex: 1, borderRadius: '12px' }}
+                        sx={{ fontFamily: 'var(--font-sarabun)', color: '#64748B', fontWeight: 600, flex: 1, borderRadius: '12px' }}
                     >
                         ยกเลิก
                     </Button>
@@ -382,7 +382,7 @@ export default function StaffManagementPage() {
                         onClick={executeDelete}
                         variant="contained"
                         sx={{
-                            fontFamily: 'var(--font-prompt)', bgcolor: '#EF4444', fontWeight: 700, flex: 1, borderRadius: '12px',
+                            fontFamily: 'var(--font-sarabun)', bgcolor: '#EF4444', fontWeight: 700, flex: 1, borderRadius: '12px',
                             '&:hover': { bgcolor: '#DC2626' }
                         }}
                     >
@@ -468,7 +468,7 @@ export default function StaffManagementPage() {
                                 <Typography sx={{
                                     fontWeight: 600,
                                     fontSize: `${(selectedStaffForBadge.name_font_size || 1.4) * 1.857}rem`,
-                                    fontFamily: "'Prompt', sans-serif",
+                                    fontFamily: "'Sarabun', sans-serif",
                                     lineHeight: 1.2,
                                     mb: 1.5,
                                     textShadow: '0 2px 4px rgba(0,0,0,0.2)',
@@ -480,7 +480,7 @@ export default function StaffManagementPage() {
                                 <Typography sx={{
                                     fontWeight: 600,
                                     fontSize: `${(selectedStaffForBadge.en_name_font_size || 1.0) * 1.857}rem`,
-                                    fontFamily: "'Prompt', sans-serif",
+                                    fontFamily: "'Sarabun', sans-serif",
                                     textTransform: 'uppercase',
                                     lineHeight: 1.1,
                                     mb: 1.5,

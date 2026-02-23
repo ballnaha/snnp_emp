@@ -136,10 +136,10 @@ function LoginContent() {
                         />
                     </Box>
 
-                    <Typography variant="h5" sx={{ fontWeight: 800, color: '#1E293B', mb: 1, letterSpacing: '-0.5px', textAlign: 'center', fontFamily: 'var(--font-prompt)' }}>
+                    <Typography variant="h5" sx={{ fontWeight: 800, color: '#1E293B', mb: 1, letterSpacing: '-0.5px', textAlign: 'center', fontFamily: 'var(--font-sarabun)' }}>
                         ระบบจัดการบัตรพนักงาน
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748B', mb: 4, fontWeight: 500, textAlign: 'center', fontFamily: 'var(--font-prompt)' }}>
+                    <Typography variant="body2" sx={{ color: '#64748B', mb: 4, fontWeight: 500, textAlign: 'center', fontFamily: 'var(--font-sarabun)' }}>
                         ลงชื่อเข้าใช้งานเข้าสู่ระบบ
                     </Typography>
 
@@ -149,7 +149,7 @@ function LoginContent() {
                             sx={{
                                 mb: 3,
                                 borderRadius: '12px',
-                                fontFamily: 'var(--font-prompt)',
+                                fontFamily: 'var(--font-sarabun)',
                                 alignItems: 'center',
                                 '& .MuiAlert-icon': { py: 0.5 }
                             }}
@@ -161,7 +161,7 @@ function LoginContent() {
                     <form onSubmit={handleSubmit}>
                         <Stack spacing={2.5}>
                             <Box>
-                                <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600, fontFamily: 'var(--font-prompt)', mb: 1, display: 'block', ml: 0.5 }}>
+                                <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600, fontFamily: 'var(--font-sarabun)', mb: 1, display: 'block', ml: 0.5 }}>
                                     Username
                                 </Typography>
                                 <TextField
@@ -183,7 +183,7 @@ function LoginContent() {
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '16px',
                                             backgroundColor: '#ffffff',
-                                            fontFamily: 'var(--font-prompt)',
+                                            fontFamily: 'var(--font-sarabun)',
                                             fontSize: '0.95rem',
                                             transition: 'all 0.2s',
                                             '& fieldset': { borderColor: 'rgba(226, 232, 240, 0.8)', borderWidth: '2px' },
@@ -208,7 +208,7 @@ function LoginContent() {
                             </Box>
 
                             <Box>
-                                <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600, fontFamily: 'var(--font-prompt)', mb: 1, display: 'block', ml: 0.5 }}>
+                                <Typography variant="caption" sx={{ color: '#475569', fontWeight: 600, fontFamily: 'var(--font-sarabun)', mb: 1, display: 'block', ml: 0.5 }}>
                                     Password
                                 </Typography>
                                 <TextField
@@ -231,7 +231,7 @@ function LoginContent() {
                                         '& .MuiOutlinedInput-root': {
                                             borderRadius: '16px',
                                             backgroundColor: '#ffffff',
-                                            fontFamily: 'var(--font-prompt)',
+                                            fontFamily: 'var(--font-sarabun)',
                                             fontSize: '0.95rem',
                                             transition: 'all 0.2s',
                                             '& fieldset': { borderColor: 'rgba(226, 232, 240, 0.8)', borderWidth: '2px' },
@@ -276,7 +276,7 @@ function LoginContent() {
                                     fontWeight: 700,
                                     textTransform: 'none',
                                     fontSize: '1rem',
-                                    fontFamily: 'var(--font-prompt)',
+                                    fontFamily: 'var(--font-sarabun)',
                                     boxShadow: '0 8px 16px rgba(99, 102, 241, 0.25)',
                                     transition: 'all 0.3s',
                                     '&:hover': {
@@ -294,7 +294,7 @@ function LoginContent() {
                         </Stack>
                     </form>
 
-                    <Typography variant="body2" sx={{ textAlign: 'center', mt: 6, color: '#94A3B8', fontWeight: 500, fontFamily: 'var(--font-prompt)' }}>
+                    <Typography variant="body2" sx={{ textAlign: 'center', mt: 6, color: '#94A3B8', fontWeight: 500, fontFamily: 'var(--font-sarabun)' }}>
                         © {new Date().getFullYear()} SNNP
                     </Typography>
                 </Paper>

@@ -82,7 +82,7 @@ export default function AdminHeader({ drawerWidth, handleDrawerToggle }: AdminHe
                             color: '#1A1C2D',
                             display: { xs: 'none', sm: 'block' },
                             letterSpacing: '-0.5px',
-                            fontFamily: 'var(--font-prompt)'
+                            fontFamily: 'var(--font-sarabun)'
                         }}
                     >
                         ยินดีต้อนรับ, {session?.user?.name || 'User'} 👋
@@ -114,10 +114,10 @@ export default function AdminHeader({ drawerWidth, handleDrawerToggle }: AdminHe
                             {session?.user?.name?.charAt(0) || 'U'}
                         </Avatar>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                            <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#1A1C2D', fontFamily: 'var(--font-prompt)', lineHeight: 1.2 }}>
+                            <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#1A1C2D', fontFamily: 'var(--font-sarabun)', lineHeight: 1.2 }}>
                                 {session?.user?.name || 'User'}
                             </Typography>
-                            <Typography variant="caption" sx={{ color: '#8A8C9E', fontFamily: 'var(--font-prompt)', display: 'block' }}>
+                            <Typography variant="caption" sx={{ color: '#8A8C9E', fontFamily: 'var(--font-sarabun)', display: 'block' }}>
                                 {(session?.user as any)?.role || 'Member'}
                             </Typography>
                         </Box>
@@ -154,20 +154,20 @@ export default function AdminHeader({ drawerWidth, handleDrawerToggle }: AdminHe
                             <ListItemIcon>
                                 <UserSquare size="20" color="#3B82F6" />
                             </ListItemIcon>
-                            <Typography sx={{ fontFamily: 'var(--font-prompt)', fontWeight: 500, fontSize: '0.9rem' }}>โปรไฟล์</Typography>
+                            <Typography sx={{ fontFamily: 'var(--font-sarabun)', fontWeight: 500, fontSize: '0.9rem' }}>โปรไฟล์</Typography>
                         </MenuItem>
                         <MenuItem onClick={handleClose} sx={{ borderRadius: '8px', py: 1, mb: 0.5 }}>
                             <ListItemIcon>
                                 <Setting2 size="20" color="#8A8C9E" />
                             </ListItemIcon>
-                            <Typography sx={{ fontFamily: 'var(--font-prompt)', fontWeight: 500, fontSize: '0.9rem' }}>ตั้งค่า</Typography>
+                            <Typography sx={{ fontFamily: 'var(--font-sarabun)', fontWeight: 500, fontSize: '0.9rem' }}>ตั้งค่า</Typography>
                         </MenuItem>
                         <Divider sx={{ my: 1, opacity: 0.5 }} />
                         <MenuItem onClick={handleLogout} sx={{ borderRadius: '8px', py: 1, color: '#EF4444' }}>
                             <ListItemIcon>
                                 <Logout size="20" color="#EF4444" />
                             </ListItemIcon>
-                            <Typography sx={{ fontFamily: 'var(--font-prompt)', fontWeight: 600, fontSize: '0.9rem' }}>ออกจากระบบ</Typography>
+                            <Typography sx={{ fontFamily: 'var(--font-sarabun)', fontWeight: 600, fontSize: '0.9rem' }}>ออกจากระบบ</Typography>
                         </MenuItem>
                     </Menu>
                 </Box>
