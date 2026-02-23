@@ -29,6 +29,7 @@ function LoginContent() {
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
+    const [isSuccess, setIsSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -36,19 +37,23 @@ function LoginContent() {
 
         if (!username.trim() && !password.trim()) {
             setError('กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบ');
+            setIsSuccess(false);
             return;
         }
         if (!username.trim()) {
             setError('กรุณากรอก Username');
+            setIsSuccess(false);
             return;
         }
         if (!password.trim()) {
             setError('กรุณากรอก Password');
+            setIsSuccess(false);
             return;
         }
 
         setLoading(true);
         setError('');
+        setIsSuccess(false);
 
         try {
             const res = await signIn('credentials', {
@@ -59,8 +64,10 @@ function LoginContent() {
 
             if (res?.error) {
                 setError('ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง');
+                setIsSuccess(false);
             } else if (res?.ok || res?.url) {
                 setError('เข้าสู่ระบบสำเร็จ กำลังพาคุณไป...');
+                setIsSuccess(true);
                 window.location.href = callbackUrl;
             }
         } catch (err: any) {
@@ -138,7 +145,7 @@ function LoginContent() {
 
                     {error && (
                         <Alert
-                            severity="error"
+                            severity={isSuccess ? "success" : "error"}
                             sx={{
                                 mb: 3,
                                 borderRadius: '12px',
@@ -165,9 +172,12 @@ function LoginContent() {
                                     value={username}
                                     onChange={(e) => {
                                         setUsername(e.target.value);
-                                        if (error) setError('');
+                                        if (error) {
+                                            setError('');
+                                            setIsSuccess(false);
+                                        }
                                     }}
-                                    error={error.includes('Username') || error.includes('ข้อมูล')}
+                                    error={!isSuccess && (error.includes('Username') || error.includes('ข้อมูล'))}
                                     variant="outlined"
                                     sx={{
                                         '& .MuiOutlinedInput-root': {
@@ -189,7 +199,7 @@ function LoginContent() {
                                         input: {
                                             startAdornment: (
                                                 <InputAdornment position="start">
-                                                    <User size={20} color={error.includes('Username') || error.includes('ข้อมูล') ? '#EF4444' : '#94A3B8'} variant="Bulk" />
+                                                    <User size={20} color={!isSuccess && (error.includes('Username') || error.includes('ข้อมูล')) ? '#EF4444' : '#94A3B8'} variant="Bulk" />
                                                 </InputAdornment>
                                             ),
                                         }
@@ -210,9 +220,12 @@ function LoginContent() {
                                     value={password}
                                     onChange={(e) => {
                                         setPassword(e.target.value);
-                                        if (error) setError('');
+                                        if (error) {
+                                            setError('');
+                                            setIsSuccess(false);
+                                        }
                                     }}
-                                    error={error.includes('Password') || error.includes('ข้อมูล')}
+                                    error={!isSuccess && (error.includes('Password') || error.includes('ข้อมูล'))}
                                     variant="outlined"
                                     sx={{
                                         '& .MuiOutlinedInput-root': {
@@ -234,7 +247,7 @@ function LoginContent() {
                                         input: {
                                             startAdornment: (
                                                 <InputAdornment position="start">
-                                                    <Lock size={20} color={error.includes('Password') || error.includes('ข้อมูล') ? '#EF4444' : '#94A3B8'} variant="Bulk" />
+                                                    <Lock size={20} color={!isSuccess && (error.includes('Password') || error.includes('ข้อมูล')) ? '#EF4444' : '#94A3B8'} variant="Bulk" />
                                                 </InputAdornment>
                                             ),
                                             endAdornment: (
