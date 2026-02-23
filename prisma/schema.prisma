@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model employee {
+  id           Int       @id @default(autoincrement())
+  file         String?   @db.VarChar(250)
+  th_firstname String?   @db.VarChar(250)
+  th_lastname  String?   @db.VarChar(250)
+  en_firstname String?   @db.VarChar(250)
+  en_lastname  String?   @db.VarChar(250)
+  emp_id       Int?      @db.Int
+  department   String?   @db.VarChar(250)
+  section      String?   @db.VarChar(250)
+  company      String?   @db.VarChar(250)
+  emp_card_id  String?   @db.VarChar(250)
+  email        String?   @db.VarChar(250)
+  website      String?   @db.VarChar(250)
+  start_date   DateTime? @db.Date
+  name_font_size    Float?    @default(1.4)
+  en_name_font_size Float?    @default(1.0)
+  id_font_size      Float?    @default(1.4)
+  created_at   DateTime? @default(now()) @db.DateTime(0)
+  updated_at   DateTime? @updatedAt @db.DateTime(0)
+}
+
+model user {
+  id        String   @id @default(cuid())
+  username  String   @unique(map: "User_username_key")
+  password  String
+  name      String?
+  role      String   @default("user")
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
