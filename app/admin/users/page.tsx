@@ -188,10 +188,10 @@ export default function UserManagementPage() {
             {/* Page Title and Action */}
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' }, mb: 4, gap: 2 }}>
                 <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 600, fontFamily: 'var(--font-sarabun)', color: '#1E293B' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 600, fontFamily: 'var(--font-prompt)', color: '#1E293B' }}>
                         จัดการผู้ใช้งาน
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', mt: 0.5 }}>
+                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', mt: 0.5 }}>
                         จัดการข้อมูลบัญชีผู้ใช้ บทบาท และสิทธิ์การเข้าถึงระบบ
                     </Typography>
                 </Box>
@@ -201,7 +201,7 @@ export default function UserManagementPage() {
                     onClick={() => handleOpen()}
                     sx={{
                         borderRadius: '14px', bgcolor: '#1E293B', textTransform: 'none', px: 3, py: 1.5,
-                        fontFamily: 'var(--font-sarabun)', fontWeight: 700, fontSize: '0.95rem',
+                        fontFamily: 'var(--font-prompt)', fontWeight: 700, fontSize: '0.95rem',
                         boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)',
                         '&:hover': { bgcolor: '#000', transform: 'translateY(-2px)' },
                         transition: 'all 0.2s'
@@ -219,10 +219,10 @@ export default function UserManagementPage() {
                             {stat.icon}
                         </Box>
                         <Box>
-                            <Typography variant="caption" sx={{ color: '#64748B', fontWeight: 600, fontFamily: 'var(--font-sarabun)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                            <Typography variant="caption" sx={{ color: '#64748B', fontWeight: 600, fontFamily: 'var(--font-prompt)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                                 {stat.label}
                             </Typography>
-                            <Typography variant="h5" sx={{ fontWeight: 800, color: '#1E293B', fontFamily: 'var(--font-sarabun)' }}>
+                            <Typography variant="h5" sx={{ fontWeight: 800, color: '#1E293B', fontFamily: 'var(--font-prompt)' }}>
                                 {stat.value}
                             </Typography>
                         </Box>
@@ -247,7 +247,7 @@ export default function UserManagementPage() {
                             ),
                             sx: { borderRadius: '14px', bgcolor: '#F8FAFC', border: 'none', '& fieldset': { border: 'none' } }
                         }}
-                        sx={{ maxWidth: 450, '& .MuiInputBase-input': { fontFamily: 'var(--font-sarabun)', py: 1.5, fontSize: '0.95rem' } }}
+                        sx={{ maxWidth: 450, '& .MuiInputBase-input': { fontFamily: 'var(--font-prompt)', py: 1.5, fontSize: '0.95rem' } }}
                     />
                 </Box>
 
@@ -255,11 +255,11 @@ export default function UserManagementPage() {
                     <Table>
                         <TableHead sx={{ bgcolor: '#F8FAFC' }}>
                             <TableRow>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', py: 2.5 }}>ข้อมูลผู้ใช้งาน</TableCell>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569' }}>Username</TableCell>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569' }}>บทบาท</TableCell>
-                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569' }}>สถานะการใช้งาน</TableCell>
-                                <TableCell align="right" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', pr: 4 }}>จัดการ</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', py: 2.5 }}>ข้อมูลผู้ใช้งาน</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569' }}>Username</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569' }}>บทบาท</TableCell>
+                                <TableCell sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569' }}>สถานะการใช้งาน</TableCell>
+                                <TableCell align="right" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', pr: 4 }}>จัดการ</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -273,7 +273,7 @@ export default function UserManagementPage() {
                                 <TableRow>
                                     <TableCell colSpan={5} align="center" sx={{ py: 8 }}>
                                         <DirectboxNotif size={64} color="#CBD5E1" variant="Bulk" />
-                                        <Typography sx={{ mt: 2, fontFamily: 'var(--font-sarabun)', color: '#94A3B8', fontWeight: 500 }}>
+                                        <Typography sx={{ mt: 2, fontFamily: 'var(--font-prompt)', color: '#94A3B8', fontWeight: 500 }}>
                                             ไม่พบข้อมูลผู้ใช้งานที่กำลังค้นหา
                                         </Typography>
                                     </TableCell>
@@ -290,10 +290,10 @@ export default function UserManagementPage() {
                                                 {user.name?.charAt(0) || 'U'}
                                             </Avatar>
                                             <Box>
-                                                <Typography sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#1E293B', lineHeight: 1.2 }}>
+                                                <Typography sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#1E293B', lineHeight: 1.2 }}>
                                                     {user.name}
                                                 </Typography>
-                                                <Typography variant="caption" sx={{ color: '#94A3B8', fontFamily: 'var(--font-sarabun)' }}>
+                                                <Typography variant="caption" sx={{ color: '#94A3B8', fontFamily: 'var(--font-prompt)' }}>
                                                     สร้างเมื่อ: {new Date(user.createdAt).toLocaleDateString('th-TH')}
                                                 </Typography>
                                             </Box>
@@ -310,7 +310,7 @@ export default function UserManagementPage() {
                                                 icon={<Crown size={14} variant="Bold" color="#8B5CF6" />}
                                                 label="ADMIN"
                                                 sx={{
-                                                    fontWeight: 800, borderRadius: '8px', fontFamily: 'var(--font-sarabun)',
+                                                    fontWeight: 800, borderRadius: '8px', fontFamily: 'var(--font-prompt)',
                                                     fontSize: '0.75rem', bgcolor: '#F5F3FF', color: '#8B5CF6',
                                                     border: '1px solid #DDD6FE'
                                                 }}
@@ -320,7 +320,7 @@ export default function UserManagementPage() {
                                                 icon={<UserSquare size={14} variant="Bold" color="#64748B" />}
                                                 label="USER"
                                                 sx={{
-                                                    fontWeight: 800, borderRadius: '8px', fontFamily: 'var(--font-sarabun)',
+                                                    fontWeight: 800, borderRadius: '8px', fontFamily: 'var(--font-prompt)',
                                                     fontSize: '0.75rem', bgcolor: '#F8FAFC', color: '#64748B',
                                                     border: '1px solid #E2E8F0'
                                                 }}
@@ -337,7 +337,7 @@ export default function UserManagementPage() {
                                             <Typography variant="body2" sx={{
                                                 fontWeight: 700,
                                                 color: user.status === 'inactive' ? '#EF4444' : '#10B981',
-                                                fontFamily: 'var(--font-sarabun)', fontSize: '0.85rem'
+                                                fontFamily: 'var(--font-prompt)', fontSize: '0.85rem'
                                             }}>
                                                 {user.status === 'inactive' ? 'ระงับการใช้งาน' : 'พร้อมใช้งาน'}
                                             </Typography>
@@ -372,10 +372,10 @@ export default function UserManagementPage() {
                             {editingUser ? <Edit2 variant="Bold" color="#3B82F6" size={28} /> : <UserAdd variant="Bold" color="#10B981" size={28} />}
                         </Box>
                         <Box>
-                            <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: 'var(--font-sarabun)', color: '#1E293B', lineHeight: 1.1 }}>
+                            <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: 'var(--font-prompt)', color: '#1E293B', lineHeight: 1.1 }}>
                                 {editingUser ? 'แก้ไขผู้ใช้งาน' : 'สร้างบัญชีผู้ใช้ใหม่'}
                             </Typography>
-                            <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', mt: 0.5 }}>
+                            <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', mt: 0.5 }}>
                                 {editingUser ? 'อัปเดตข้อมูลและสิทธิ์การเข้าถึง' : 'ระบุรายละเอียดเพื่อเริ่มต้นใช้งานระบบ'}
                             </Typography>
                         </Box>
@@ -391,7 +391,7 @@ export default function UserManagementPage() {
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                 InputProps={{
                                     startAdornment: <UserSquare size={22} color="#6366F1" variant="TwoTone" style={{ marginRight: 12 }} />,
-                                    sx: { borderRadius: '14px', fontFamily: 'var(--font-sarabun)', bgcolor: '#F8FAFC' }
+                                    sx: { borderRadius: '14px', fontFamily: 'var(--font-prompt)', bgcolor: '#F8FAFC' }
                                 }}
                             />
                             <TextField
@@ -404,7 +404,7 @@ export default function UserManagementPage() {
                                 onChange={(e) => setFormData({ ...formData, username: e.target.value })}
                                 InputProps={{
                                     startAdornment: <ShieldTick size={22} color="#10B981" variant="TwoTone" style={{ marginRight: 12 }} />,
-                                    sx: { borderRadius: '14px', fontFamily: 'var(--font-sarabun)', bgcolor: editingUser ? '#F1F5F9' : '#F8FAFC' }
+                                    sx: { borderRadius: '14px', fontFamily: 'var(--font-prompt)', bgcolor: editingUser ? '#F1F5F9' : '#F8FAFC' }
                                 }}
                             />
                             <TextField
@@ -417,7 +417,7 @@ export default function UserManagementPage() {
                                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                                 InputProps={{
                                     startAdornment: <Lock size={22} color="#F59E0B" variant="TwoTone" style={{ marginRight: 12 }} />,
-                                    sx: { borderRadius: '14px', fontFamily: 'var(--font-sarabun)', bgcolor: '#F8FAFC' }
+                                    sx: { borderRadius: '14px', fontFamily: 'var(--font-prompt)', bgcolor: '#F8FAFC' }
                                 }}
                             />
                             <Box sx={{ display: 'flex', gap: 3, flexDirection: { xs: 'column', sm: 'row' } }}>
@@ -430,11 +430,11 @@ export default function UserManagementPage() {
                                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                                     InputProps={{
                                         startAdornment: <Crown size={22} color="#8B5CF6" variant="TwoTone" style={{ marginRight: 12 }} />,
-                                        sx: { borderRadius: '14px', fontFamily: 'var(--font-sarabun)', bgcolor: '#F8FAFC' }
+                                        sx: { borderRadius: '14px', fontFamily: 'var(--font-prompt)', bgcolor: '#F8FAFC' }
                                     }}
                                 >
-                                    <MenuItem value="admin" sx={{ fontFamily: 'var(--font-sarabun)' }}>ผู้ดูแลระบบ (Admin)</MenuItem>
-                                    <MenuItem value="user" sx={{ fontFamily: 'var(--font-sarabun)' }}>ผู้ใช้งานทั่วไป (User)</MenuItem>
+                                    <MenuItem value="admin" sx={{ fontFamily: 'var(--font-prompt)' }}>ผู้ดูแลระบบ (Admin)</MenuItem>
+                                    <MenuItem value="user" sx={{ fontFamily: 'var(--font-prompt)' }}>ผู้ใช้งานทั่วไป (User)</MenuItem>
                                 </TextField>
                                 <TextField
                                     id="user-status-select"
@@ -445,11 +445,11 @@ export default function UserManagementPage() {
                                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
                                     InputProps={{
                                         startAdornment: <TickCircle size={22} color={formData.status === 'active' ? '#10B981' : '#EF4444'} variant="TwoTone" style={{ marginRight: 12 }} />,
-                                        sx: { borderRadius: '14px', fontFamily: 'var(--font-sarabun)', bgcolor: '#F8FAFC' }
+                                        sx: { borderRadius: '14px', fontFamily: 'var(--font-prompt)', bgcolor: '#F8FAFC' }
                                     }}
                                 >
-                                    <MenuItem value="active" sx={{ fontFamily: 'var(--font-sarabun)' }}>พร้อมใช้งาน (Active)</MenuItem>
-                                    <MenuItem value="inactive" sx={{ fontFamily: 'var(--font-sarabun)' }}>ระงับการใช้งาน (Inactive)</MenuItem>
+                                    <MenuItem value="active" sx={{ fontFamily: 'var(--font-prompt)' }}>พร้อมใช้งาน (Active)</MenuItem>
+                                    <MenuItem value="inactive" sx={{ fontFamily: 'var(--font-prompt)' }}>ระงับการใช้งาน (Inactive)</MenuItem>
                                 </TextField>
                             </Box>
                         </Stack>
@@ -458,7 +458,7 @@ export default function UserManagementPage() {
                         <Button
                             disabled={submitLoading}
                             onClick={handleClose}
-                            sx={{ fontFamily: 'var(--font-sarabun)', color: '#64748B', fontWeight: 600, px: 3 }}
+                            sx={{ fontFamily: 'var(--font-prompt)', color: '#64748B', fontWeight: 600, px: 3 }}
                         >
                             ยกเลิก
                         </Button>
@@ -469,7 +469,7 @@ export default function UserManagementPage() {
                             startIcon={submitLoading ? <CircularProgress size={20} color="inherit" /> : <Save2 size={20} variant="Bold" color="#fff" />}
                             sx={{
                                 borderRadius: '14px', bgcolor: '#1E293B', px: 5, py: 1.5,
-                                fontFamily: 'var(--font-sarabun)', fontWeight: 700,
+                                fontFamily: 'var(--font-prompt)', fontWeight: 700,
                                 boxShadow: '0 10px 15px -3px rgba(30, 41, 59, 0.2)',
                                 '&:hover': { bgcolor: '#000' }
                             }}
@@ -495,10 +495,10 @@ export default function UserManagementPage() {
                     }}>
                         <Danger size={48} variant="Bold" color="#EF4444" />
                     </Box>
-                    <Typography variant="h6" sx={{ fontWeight: 800, fontFamily: 'var(--font-sarabun)', mb: 1 }}>
+                    <Typography variant="h6" sx={{ fontWeight: 800, fontFamily: 'var(--font-prompt)', mb: 1 }}>
                         ยืนยันการลบผู้ใช้?
                     </Typography>
-                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', mb: 3 }}>
+                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', mb: 3 }}>
                         คุณแน่ใจหรือไม่ว่าต้องการลบผู้ใช้ <strong>{userToDelete?.name}</strong>? การดำเนินการนี้ไม่สามารถย้อนกลับได้
                     </Typography>
                 </DialogContent>
@@ -506,7 +506,7 @@ export default function UserManagementPage() {
                     <Button
                         disabled={deleteLoading}
                         onClick={() => setDeleteConfirmOpen(false)}
-                        sx={{ fontFamily: 'var(--font-sarabun)', color: '#64748B', fontWeight: 600, flex: 1, borderRadius: '12px' }}
+                        sx={{ fontFamily: 'var(--font-prompt)', color: '#64748B', fontWeight: 600, flex: 1, borderRadius: '12px' }}
                     >
                         ยกเลิก
                     </Button>
@@ -515,7 +515,7 @@ export default function UserManagementPage() {
                         onClick={handleConfirmDelete}
                         variant="contained"
                         sx={{
-                            fontFamily: 'var(--font-sarabun)', bgcolor: '#EF4444', fontWeight: 700, flex: 1, borderRadius: '12px',
+                            fontFamily: 'var(--font-prompt)', bgcolor: '#EF4444', fontWeight: 700, flex: 1, borderRadius: '12px',
                             '&:hover': { bgcolor: '#DC2626' }
                         }}
                     >
@@ -538,7 +538,7 @@ export default function UserManagementPage() {
                     sx={{
                         width: '100%',
                         borderRadius: '12px',
-                        fontFamily: 'var(--font-sarabun)',
+                        fontFamily: 'var(--font-prompt)',
                         fontWeight: 600,
                         boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)'
                     }}

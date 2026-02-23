@@ -78,7 +78,7 @@ export default function ImageCropper({ open, image, onClose, onCropComplete }: I
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-            <DialogTitle sx={{ fontFamily: 'var(--font-sarabun)', fontWeight: 700 }}>
+            <DialogTitle sx={{ fontFamily: 'var(--font-prompt)', fontWeight: 700 }}>
                 ปรับแต่งรูปภาพพนักงาน
             </DialogTitle>
             <DialogContent sx={{ height: 450, position: 'relative', bgcolor: '#000' }}>
@@ -106,14 +106,14 @@ export default function ImageCropper({ open, image, onClose, onCropComplete }: I
                     />
                 </Box>
                 <Box sx={{ display: 'flex', gap: 2, width: '100%', justifyContent: 'flex-end' }}>
-                    <Button onClick={onClose} sx={{ fontFamily: 'var(--font-sarabun)', color: '#64748B' }}>
+                    <Button onClick={onClose} sx={{ fontFamily: 'var(--font-prompt)', color: '#64748B' }}>
                         ยกเลิก
                     </Button>
                     <Button
                         variant="contained"
                         onClick={getCroppedImg}
                         sx={{
-                            fontFamily: 'var(--font-sarabun)',
+                            fontFamily: 'var(--font-prompt)',
                             bgcolor: '#3B82F6',
                             borderRadius: '12px',
                             px: 4

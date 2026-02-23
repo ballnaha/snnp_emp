@@ -196,11 +196,11 @@ export default function NewStaffPage() {
                         }}>
                             <UserAdd variant="Bold" size={24} color="#6366F1" />
                         </Box>
-                        <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: 'var(--font-sarabun)', color: '#1E293B' }}>
+                        <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: 'var(--font-prompt)', color: '#1E293B' }}>
                             ลงทะเบียนพนักงานใหม่
                         </Typography>
                     </Box>
-                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-sarabun)', ml: 6.5 }}>
+                    <Typography variant="body2" sx={{ color: '#64748B', fontFamily: 'var(--font-prompt)', ml: 6.5 }}>
                         กรอกข้อมูลพื้นฐานเพื่อสร้างโปรไฟล์พนักงานและเตรียมออกบัตร
                     </Typography>
                 </Box>
@@ -211,7 +211,7 @@ export default function NewStaffPage() {
                     sx={{
                         borderRadius: '10px',
                         color: '#64748B',
-                        fontFamily: 'var(--font-sarabun)',
+                        fontFamily: 'var(--font-prompt)',
                         fontWeight: 600,
                         textTransform: 'none',
                         px: 1.5,
@@ -240,7 +240,7 @@ export default function NewStaffPage() {
                         }}>
                             <Typography variant="subtitle2" sx={{
                                 fontWeight: 700,
-                                fontFamily: 'var(--font-sarabun)',
+                                fontFamily: 'var(--font-prompt)',
                                 color: '#1E293B',
                                 mb: 3,
                                 textAlign: 'left',
@@ -268,7 +268,7 @@ export default function NewStaffPage() {
                                     {!formData.file && (
                                         <Box sx={{ textAlign: 'center' }}>
                                             <UserSquare size={64} color="#CBD5E1" variant="Bulk" />
-                                            <Typography variant="caption" sx={{ display: 'block', mt: 1, color: '#94A3B8', fontFamily: 'var(--font-sarabun)' }}>
+                                            <Typography variant="caption" sx={{ display: 'block', mt: 1, color: '#94A3B8', fontFamily: 'var(--font-prompt)' }}>
                                                 คลิกเพื่ออัปโหลด
                                             </Typography>
                                         </Box>
@@ -331,7 +331,7 @@ export default function NewStaffPage() {
                                     display: 'flex',
                                     gap: 1,
                                     color: '#64748B',
-                                    fontFamily: 'var(--font-sarabun)',
+                                    fontFamily: 'var(--font-prompt)',
                                     lineHeight: 1.5
                                 }}>
                                     <InfoCircle size={14} variant="Bold" color="#6366F1" />
@@ -354,7 +354,7 @@ export default function NewStaffPage() {
                             <Box sx={{ mb: 6 }}>
                                 <Typography variant="h6" sx={{
                                     fontWeight: 800,
-                                    fontFamily: 'var(--font-sarabun)',
+                                    fontFamily: 'var(--font-prompt)',
                                     color: '#1E293B',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -366,7 +366,7 @@ export default function NewStaffPage() {
 
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             ชื่อ (ภาษาไทย)
                                         </Typography>
                                         <TextField
@@ -380,7 +380,7 @@ export default function NewStaffPage() {
                                         />
                                     </Box>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             นามสกุล (ภาษาไทย)
                                         </Typography>
                                         <TextField
@@ -395,7 +395,7 @@ export default function NewStaffPage() {
                                     </Box>
 
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             First Name (English)
                                         </Typography>
                                         <TextField
@@ -409,7 +409,7 @@ export default function NewStaffPage() {
                                         />
                                     </Box>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             Last Name (English)
                                         </Typography>
                                         <TextField
@@ -424,7 +424,7 @@ export default function NewStaffPage() {
                                     </Box>
 
                                     <Box sx={{ width: '100%' }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             เลขที่บัตรประชาชน
                                         </Typography>
                                         <TextField
@@ -451,7 +451,7 @@ export default function NewStaffPage() {
                             <Box sx={{ mb: 6 }}>
                                 <Typography variant="h6" sx={{
                                     fontWeight: 800,
-                                    fontFamily: 'var(--font-sarabun)',
+                                    fontFamily: 'var(--font-prompt)',
                                     color: '#1E293B',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -463,7 +463,7 @@ export default function NewStaffPage() {
 
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             รหัสพนักงาน <span style={{ color: '#EF4444' }}>*</span>
                                         </Typography>
                                         <TextField
@@ -477,7 +477,7 @@ export default function NewStaffPage() {
                                         />
                                     </Box>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             วันที่เริ่มงาน
                                         </Typography>
                                         <DatePicker
@@ -501,7 +501,7 @@ export default function NewStaffPage() {
                                     </Box>
 
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             ฝ่าย
                                         </Typography>
                                         <TextField
@@ -520,7 +520,7 @@ export default function NewStaffPage() {
                                         />
                                     </Box>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             แผนก
                                         </Typography>
                                         <TextField
@@ -533,7 +533,7 @@ export default function NewStaffPage() {
                                     </Box>
 
                                     <Box sx={{ width: '100%' }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             บริษัท
                                         </Typography>
                                         <TextField
@@ -553,7 +553,7 @@ export default function NewStaffPage() {
                             <Box sx={{ mb: 2 }}>
                                 <Typography variant="h6" sx={{
                                     fontWeight: 800,
-                                    fontFamily: 'var(--font-sarabun)',
+                                    fontFamily: 'var(--font-prompt)',
                                     color: '#1E293B',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -565,7 +565,7 @@ export default function NewStaffPage() {
 
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             Email พนักงาน
                                         </Typography>
                                         <TextField
@@ -578,7 +578,7 @@ export default function NewStaffPage() {
                                         />
                                     </Box>
                                     <Box sx={{ width: { xs: '100%', sm: 'calc(50% - 12px)' } }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-sarabun)', color: '#475569', mb: 1, ml: 1 }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, fontFamily: 'var(--font-prompt)', color: '#475569', mb: 1, ml: 1 }}>
                                             Website บริษัท
                                         </Typography>
                                         <TextField
@@ -611,7 +611,7 @@ export default function NewStaffPage() {
                         }}>
                             <Typography variant="h6" sx={{
                                 fontWeight: 800,
-                                fontFamily: 'var(--font-sarabun)',
+                                fontFamily: 'var(--font-prompt)',
                                 color: '#1E293B',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -699,9 +699,9 @@ export default function NewStaffPage() {
                                         {/* Left Side: Employee Names and ID */}
                                         <Box sx={{ flex: 1, color: '#FFF' }}>
                                             <Typography sx={{
-                                                fontWeight: 600,
+                                                fontWeight: 400,
                                                 fontSize: `${nameFontSize}rem`,
-                                                fontFamily: "'Sarabun', sans-serif",
+                                                fontFamily: "'Prompt', sans-serif",
                                                 lineHeight: 1.2, // ปรับให้เท่ากันเพื่อความสวยงาม
                                                 mb: 1,
                                                 textShadow: '0 1px 2px rgba(0,0,0,0.2)',
@@ -711,9 +711,9 @@ export default function NewStaffPage() {
                                                 {formData.th_firstname} {formData.th_lastname}
                                             </Typography>
                                             <Typography sx={{
-                                                fontWeight: 600,
+                                                fontWeight: 400,
                                                 fontSize: `${enNameFontSize}rem`,
-                                                fontFamily: "'Sarabun', sans-serif",
+                                                fontFamily: "'Prompt', sans-serif",
                                                 textTransform: 'uppercase',
                                                 lineHeight: 1.1,
                                                 mb: 1,
@@ -727,7 +727,7 @@ export default function NewStaffPage() {
                                                 {formData.en_firstname} {formData.en_lastname}
                                             </Typography>
                                             <Typography sx={{
-                                                fontWeight: 600,
+                                                fontWeight: 400,
                                                 fontSize: `${idFontSize}rem`,
                                                 fontFamily: '"Roboto", sans-serif',
                                                 letterSpacing: '1px',
@@ -829,7 +829,7 @@ export default function NewStaffPage() {
                                     color: '#64748B',
                                     px: 3,
                                     py: 1,
-                                    fontFamily: 'var(--font-sarabun)',
+                                    fontFamily: 'var(--font-prompt)',
                                     fontWeight: 700,
                                     fontSize: '0.9rem',
                                     '&:hover': { bgcolor: '#F1F5F9' }
@@ -849,7 +849,7 @@ export default function NewStaffPage() {
                                     bgcolor: '#1E293B',
                                     px: 4,
                                     py: 1,
-                                    fontFamily: 'var(--font-sarabun)',
+                                    fontFamily: 'var(--font-prompt)',
                                     fontWeight: 800,
                                     fontSize: '0.95rem',
                                     boxShadow: '0 10px 20px -5px rgba(30, 41, 59, 0.3)',
@@ -890,7 +890,7 @@ export default function NewStaffPage() {
                     variant="filled"
                     sx={{
                         borderRadius: '16px',
-                        fontFamily: 'var(--font-sarabun)',
+                        fontFamily: 'var(--font-prompt)',
                         fontWeight: 600,
                         boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)'
                     }}

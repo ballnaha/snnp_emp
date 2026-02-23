@@ -125,12 +125,12 @@ export default function AdminDashboardPage() {
                             color: '#0F172A',
                             mb: 1,
                             letterSpacing: '-1px',
-                            fontFamily: 'var(--font-sarabun)',
+                            fontFamily: 'var(--font-prompt)',
                             display: 'flex', alignItems: 'center', gap: 1.5
                         }}>
                             Dashboard Overview
                         </Typography>
-                        <Typography variant="body1" sx={{ color: '#64748B', fontWeight: 500, fontFamily: 'var(--font-sarabun)' }}>
+                        <Typography variant="body1" sx={{ color: '#64748B', fontWeight: 500, fontFamily: 'var(--font-prompt)' }}>
                             Welcome back, <Box component="span" sx={{ color: '#0F172A', fontWeight: 700 }}>{currentUser?.name}</Box>. Here is what's happening today.
                         </Typography>
                     </Box>
@@ -148,7 +148,7 @@ export default function AdminDashboardPage() {
                             py: 1.2,
                             background: '#0F172A',
                             color: '#FFFFFF',
-                            fontFamily: 'var(--font-sarabun)',
+                            fontFamily: 'var(--font-prompt)',
                             boxShadow: '0 4px 14px 0 rgba(15, 23, 42, 0.2)',
                             '&:hover': {
                                 background: '#1E293B',
@@ -203,17 +203,17 @@ export default function AdminDashboardPage() {
                                                 <TrendUp size={14} color={stat.color} variant="Bold" /> :
                                                 <ArrowDown2 size={14} color="#EF4444" variant="Bold" />
                                             }
-                                            <Typography variant="caption" sx={{ fontWeight: 700, color: '#475569', fontFamily: 'var(--font-sarabun)' }}>
+                                            <Typography variant="caption" sx={{ fontWeight: 700, color: '#475569', fontFamily: 'var(--font-prompt)' }}>
                                                 {stat.trend}
                                             </Typography>
                                         </Box>
                                     </Box>
 
                                     <Box sx={{ mt: 'auto' }}>
-                                        <Typography variant="h3" sx={{ fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-sarabun)', lineHeight: 1, mb: 1 }}>
+                                        <Typography variant="h3" sx={{ fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-prompt)', lineHeight: 1, mb: 1 }}>
                                             {stat.value}
                                         </Typography>
-                                        <Typography variant="body2" sx={{ color: '#64748B', fontWeight: 600, fontFamily: 'var(--font-sarabun)' }}>
+                                        <Typography variant="body2" sx={{ color: '#64748B', fontWeight: 600, fontFamily: 'var(--font-prompt)' }}>
                                             {stat.title}
                                         </Typography>
                                     </Box>
@@ -237,7 +237,7 @@ export default function AdminDashboardPage() {
                             boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)'
                         }}>
                             <Box sx={{ p: 3, px: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #F1F5F9' }}>
-                                <Typography variant="h6" sx={{ fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-sarabun)' }}>
+                                <Typography variant="h6" sx={{ fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-prompt)' }}>
                                     ความเคลื่อนไหวล่าสุด (Recent Activities)
                                 </Typography>
                                 <IconButton size="small" sx={{ color: '#64748B', bgcolor: '#F8FAFC', '&:hover': { bgcolor: '#F1F5F9' } }}>
@@ -272,16 +272,16 @@ export default function AdminDashboardPage() {
                                                     <Box sx={{ flexGrow: 1, pt: 0.5 }}>
                                                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                                             <Box>
-                                                                <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#1E293B', fontFamily: 'var(--font-sarabun)', fontSize: '1rem' }}>
+                                                                <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#1E293B', fontFamily: 'var(--font-prompt)', fontSize: '1rem' }}>
                                                                     {item.user}
                                                                 </Typography>
-                                                                <Typography variant="body2" sx={{ color: '#64748B', fontWeight: 500, mt: 0.5, fontFamily: 'var(--font-sarabun)' }}>
+                                                                <Typography variant="body2" sx={{ color: '#64748B', fontWeight: 500, mt: 0.5, fontFamily: 'var(--font-prompt)' }}>
                                                                     <Box component="span" sx={{ color: '#0F172A', fontWeight: 600 }}>{item.action}</Box> ผ่านระบบจัดการใหม่
                                                                 </Typography>
                                                             </Box>
                                                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: '#94A3B8', bgcolor: '#F8FAFC', px: 1.5, py: 0.5, borderRadius: '20px' }}>
                                                                 <Clock size={14} variant="Bold" />
-                                                                <Typography variant="caption" sx={{ fontWeight: 600, fontFamily: 'var(--font-sarabun)' }}>
+                                                                <Typography variant="caption" sx={{ fontWeight: 600, fontFamily: 'var(--font-prompt)' }}>
                                                                     {item.time}
                                                                 </Typography>
                                                             </Box>
@@ -293,7 +293,7 @@ export default function AdminDashboardPage() {
                                     ) : (
                                         <Box sx={{ textAlign: 'center', py: 6 }}>
                                             <Profile2User size={48} color="#CBD5E1" variant="Bulk" style={{ margin: '0 auto', opacity: 0.5 }} />
-                                            <Typography variant="body1" sx={{ color: '#94A3B8', fontFamily: 'var(--font-sarabun)', mt: 2, fontWeight: 600 }}>
+                                            <Typography variant="body1" sx={{ color: '#94A3B8', fontFamily: 'var(--font-prompt)', mt: 2, fontWeight: 600 }}>
                                                 ไม่มีประวัติการเพิ่มพนักงานใหม่ ในขณะนี้
                                             </Typography>
                                         </Box>
@@ -303,10 +303,10 @@ export default function AdminDashboardPage() {
                                 {/* System Status Bar */}
                                 <Box sx={{ mt: 4, pt: 4, borderTop: '1px solid #F1F5F9' }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1.5 }}>
-                                        <Typography variant="body2" sx={{ fontWeight: 700, color: '#475569', fontFamily: 'var(--font-sarabun)' }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 700, color: '#475569', fontFamily: 'var(--font-prompt)' }}>
                                             Database Status
                                         </Typography>
-                                        <Typography variant="body2" sx={{ fontWeight: 800, color: '#10B981', fontFamily: 'var(--font-sarabun)' }}>
+                                        <Typography variant="body2" sx={{ fontWeight: 800, color: '#10B981', fontFamily: 'var(--font-prompt)' }}>
                                             Healthy
                                         </Typography>
                                     </Box>
@@ -353,10 +353,10 @@ export default function AdminDashboardPage() {
                                     >
                                         {(currentUser?.name || currentUser?.username || 'U').charAt(0).toUpperCase()}
                                     </Avatar>
-                                    <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: 'var(--font-sarabun)', letterSpacing: '-0.5px', mb: 0.5 }}>
+                                    <Typography variant="h5" sx={{ fontWeight: 800, fontFamily: 'var(--font-prompt)', letterSpacing: '-0.5px', mb: 0.5 }}>
                                         {currentUser?.name || currentUser?.username || 'ผู้ใช้งาน'}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ color: '#94A3B8', fontWeight: 500, mb: 3, fontFamily: 'var(--font-sarabun)' }}>
+                                    <Typography variant="body2" sx={{ color: '#94A3B8', fontWeight: 500, mb: 3, fontFamily: 'var(--font-prompt)' }}>
                                         Manage your system & employees
                                     </Typography>
                                     <Chip
@@ -365,7 +365,7 @@ export default function AdminDashboardPage() {
                                         size="small"
                                         sx={{
                                             bgcolor: 'rgba(255,255,255,0.1)', color: '#FFFFFF',
-                                            fontWeight: 700, px: 1.5, py: 1.5, borderRadius: '8px', fontFamily: 'var(--font-sarabun)',
+                                            fontWeight: 700, px: 1.5, py: 1.5, borderRadius: '8px', fontFamily: 'var(--font-prompt)',
                                             border: '1px solid rgba(255,255,255,0.1)'
                                         }}
                                     />
@@ -375,7 +375,7 @@ export default function AdminDashboardPage() {
                             {/* Quick Actions List */}
                             <Card elevation={0} sx={{ borderRadius: '24px', border: '1px solid #E2E8F0', flexGrow: 1, boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)' }}>
                                 <Box sx={{ p: 3, px: 4, borderBottom: '1px solid #F1F5F9' }}>
-                                    <Typography variant="h6" sx={{ fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-sarabun)' }}>
+                                    <Typography variant="h6" sx={{ fontWeight: 800, color: '#0F172A', fontFamily: 'var(--font-prompt)' }}>
                                         Quick Actions
                                     </Typography>
                                 </Box>
@@ -396,8 +396,8 @@ export default function AdminDashboardPage() {
                                                     {action.icon}
                                                 </Box>
                                                 <Box>
-                                                    <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#1E293B', fontFamily: 'var(--font-sarabun)' }}>{action.title}</Typography>
-                                                    <Typography variant="caption" sx={{ color: '#64748B', fontWeight: 500, fontFamily: 'var(--font-sarabun)' }}>{action.desc}</Typography>
+                                                    <Typography variant="subtitle2" sx={{ fontWeight: 800, color: '#1E293B', fontFamily: 'var(--font-prompt)' }}>{action.title}</Typography>
+                                                    <Typography variant="caption" sx={{ color: '#64748B', fontWeight: 500, fontFamily: 'var(--font-prompt)' }}>{action.desc}</Typography>
                                                 </Box>
                                             </Box>
                                         ))}

@@ -79,7 +79,7 @@ export default function ProfilePage() {
             <Typography variant="h4" sx={{
                 fontWeight: 700,
                 mb: 4,
-                fontFamily: 'var(--font-sarabun)',
+                fontFamily: 'var(--font-prompt)',
                 color: '#1E293B'
             }}>
                 ตั้งค่าโปรไฟล์
@@ -106,7 +106,7 @@ export default function ProfilePage() {
                         >
                             {session?.user?.name?.charAt(0) || 'U'}
                         </Avatar>
-                        <Typography variant="h6" sx={{ fontWeight: 800, fontFamily: 'var(--font-sarabun)' }}>
+                        <Typography variant="h6" sx={{ fontWeight: 800, fontFamily: 'var(--font-prompt)' }}>
                             {session?.user?.name}
                         </Typography>
 
@@ -116,13 +116,13 @@ export default function ProfilePage() {
                                 size="small"
                                 color="primary"
                                 variant="outlined"
-                                sx={{ fontWeight: 700, borderRadius: '6px', fontFamily: 'var(--font-sarabun)' }}
+                                sx={{ fontWeight: 700, borderRadius: '6px', fontFamily: 'var(--font-prompt)' }}
                             />
                             <Chip
                                 label="ACTIVE"
                                 size="small"
                                 color="success"
-                                sx={{ fontWeight: 700, borderRadius: '6px', fontFamily: 'var(--font-sarabun)' }}
+                                sx={{ fontWeight: 700, borderRadius: '6px', fontFamily: 'var(--font-prompt)' }}
                             />
                         </Box>
 
@@ -130,7 +130,7 @@ export default function ProfilePage() {
                         <Stack spacing={2} sx={{ textAlign: 'left' }}>
                             <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                                 <UserSquare size={18} color="#94A3B8" />
-                                <Typography variant="body2" sx={{ fontFamily: 'var(--font-sarabun)', color: '#475569' }}>
+                                <Typography variant="body2" sx={{ fontFamily: 'var(--font-prompt)', color: '#475569' }}>
                                     Username: <strong>{(session?.user as any)?.username}</strong>
                                 </Typography>
                             </Box>
@@ -142,13 +142,13 @@ export default function ProfilePage() {
                 <Box sx={{ flex: 1 }}>
                     <Paper sx={{ p: { xs: 3, md: 5 }, borderRadius: '20px', border: '1px solid #E2E8F0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}>
                         {message.text && (
-                            <Alert severity={message.type as any} sx={{ mb: 4, borderRadius: '12px', fontFamily: 'var(--font-sarabun)' }}>
+                            <Alert severity={message.type as any} sx={{ mb: 4, borderRadius: '12px', fontFamily: 'var(--font-prompt)' }}>
                                 {message.text}
                             </Alert>
                         )}
 
                         <form onSubmit={handleUpdateProfile}>
-                            <Typography variant="h6" sx={{ fontWeight: 700, mb: 3, display: 'flex', alignItems: 'center', gap: 1, fontFamily: 'var(--font-sarabun)' }}>
+                            <Typography variant="h6" sx={{ fontWeight: 700, mb: 3, display: 'flex', alignItems: 'center', gap: 1, fontFamily: 'var(--font-prompt)' }}>
                                 <Edit size={22} color="#3B82F6" variant="Bulk" />
                                 ข้อมูลทั่วไป
                             </Typography>
@@ -161,7 +161,7 @@ export default function ProfilePage() {
                                         fullWidth
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                     />
                                     <TextField
                                         id="profile-username-input"
@@ -169,7 +169,7 @@ export default function ProfilePage() {
                                         fullWidth
                                         value={username}
                                         onChange={(e) => setUsername(e.target.value)}
-                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                     />
                                 </Box>
 
@@ -184,10 +184,10 @@ export default function ProfilePage() {
                                         InputProps={{
                                             startAdornment: <Crown size={20} color="#3B82F6" style={{ marginRight: 8 }} />
                                         }}
-                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                     >
-                                        <MenuItem value="admin" sx={{ fontFamily: 'var(--font-sarabun)' }}>Admin</MenuItem>
-                                        <MenuItem value="user" sx={{ fontFamily: 'var(--font-sarabun)' }}>User</MenuItem>
+                                        <MenuItem value="admin" sx={{ fontFamily: 'var(--font-prompt)' }}>Admin</MenuItem>
+                                        <MenuItem value="user" sx={{ fontFamily: 'var(--font-prompt)' }}>User</MenuItem>
                                     </TextField>
                                     <TextField
                                         id="profile-status-select"
@@ -199,21 +199,21 @@ export default function ProfilePage() {
                                         InputProps={{
                                             startAdornment: <ShieldTick size={20} color="#10B981" style={{ marginRight: 8 }} />
                                         }}
-                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                     >
-                                        <MenuItem value="active" sx={{ fontFamily: 'var(--font-sarabun)' }}>Active</MenuItem>
-                                        <MenuItem value="inactive" sx={{ fontFamily: 'var(--font-sarabun)' }}>Inactive</MenuItem>
+                                        <MenuItem value="active" sx={{ fontFamily: 'var(--font-prompt)' }}>Active</MenuItem>
+                                        <MenuItem value="inactive" sx={{ fontFamily: 'var(--font-prompt)' }}>Inactive</MenuItem>
                                     </TextField>
                                 </Box>
                             </Box>
 
                             <Divider sx={{ mb: 5 }} />
 
-                            <Typography variant="h6" sx={{ fontWeight: 700, mb: 3, display: 'flex', alignItems: 'center', gap: 1, fontFamily: 'var(--font-sarabun)' }}>
+                            <Typography variant="h6" sx={{ fontWeight: 700, mb: 3, display: 'flex', alignItems: 'center', gap: 1, fontFamily: 'var(--font-prompt)' }}>
                                 <Lock size={22} color="#F59E0B" variant="Bulk" />
                                 เปลี่ยนรหัสผ่าน
                             </Typography>
-                            <Typography variant="body2" sx={{ color: '#64748B', mb: 3, fontFamily: 'var(--font-sarabun)' }}>
+                            <Typography variant="body2" sx={{ color: '#64748B', mb: 3, fontFamily: 'var(--font-prompt)' }}>
                                 * เว้นว่างไว้หากไม่ต้องการเปลี่ยนรหัสผ่าน
                             </Typography>
 
@@ -225,7 +225,7 @@ export default function ProfilePage() {
                                     fullWidth
                                     value={currentPassword}
                                     onChange={(e) => setCurrentPassword(e.target.value)}
-                                    sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                    sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                 />
                                 <Box sx={{
                                     display: 'flex',
@@ -239,7 +239,7 @@ export default function ProfilePage() {
                                         fullWidth
                                         value={newPassword}
                                         onChange={(e) => setNewPassword(e.target.value)}
-                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                     />
                                     <TextField
                                         id="profile-confirm-password"
@@ -248,7 +248,7 @@ export default function ProfilePage() {
                                         fullWidth
                                         value={confirmPassword}
                                         onChange={(e) => setConfirmPassword(e.target.value)}
-                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-sarabun)' } }}
+                                        sx={{ '& .MuiInputBase-root': { fontFamily: 'var(--font-prompt)' } }}
                                     />
                                 </Box>
                             </Stack>
@@ -264,7 +264,7 @@ export default function ProfilePage() {
                                         py: 1.5,
                                         borderRadius: '12px',
                                         backgroundColor: '#1E293B',
-                                        fontFamily: 'var(--font-sarabun)',
+                                        fontFamily: 'var(--font-prompt)',
                                         fontWeight: 600,
                                         textTransform: 'none',
                                         fontSize: '1rem',

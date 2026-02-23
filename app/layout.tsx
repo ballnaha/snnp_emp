@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sarabun } from "next/font/google";
+import { Geist, Geist_Mono, Prompt } from "next/font/google";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import Providers from "@/components/Providers";
 import "./globals.css";
@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const sarabun = Sarabun({
-  variable: "--font-sarabun",
+const prompt = Prompt({
+  variable: "--font-prompt",
   subsets: ["latin", "thai"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${sarabun.variable} antialiased`} style={{ fontFamily: 'var(--font-sarabun), sans-serif' }}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${prompt.variable} antialiased`} style={{ fontFamily: 'var(--font-prompt), sans-serif' }}>
         <AppRouterCacheProvider>
           <Providers>
             {children}
